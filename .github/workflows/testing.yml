@@ -1,0 +1,14 @@
+on: [discussion, discussion_comment]
+
+jobs:
+  testing_backups:
+    runs-on: ubuntu-latest
+    name: A job to test backups
+    steps:
+      - name: Backup Testing
+        id: backup
+        uses: Pandapip1/gh-discussions-backup@latest
+        with:
+          token: ${{ github.token }}
+      - name: Get the output
+        run: echo "${{ steps.backup.outputs.backup }}"
