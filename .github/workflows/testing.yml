@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: Backup Testing
         id: backup
-        uses: Pandapip1/gh-discussions-backup@latest
+        uses: Pandapip1/gh-discussions-backup@0.0.1-testing0
         with:
           token: ${{ github.token }}
       - name: Get the output
